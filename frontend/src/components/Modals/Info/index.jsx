@@ -19,7 +19,7 @@ class InfoModal extends Component {
           <p>When you are in the dashboard, you can add your nephews by clicking the add button.</p>
           <p>You will have a list of nephews on your left.</p>
           <p>You can view the nephew's repositories in the center.</p>
-          <p>In the right, you can view details about the nephew, like name, github username and points.</p>
+          <p>In the right, you can view details about the nephew, like name, GitHub username and points.</p>
           <p>You can modify a nephew by clicking edit.</p>
           <p>You can delete a nephew by clicking delete.</p>
           <p>You may need to refresh once in a while, so click the refresh button.</p>

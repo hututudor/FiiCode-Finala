@@ -152,7 +152,7 @@ class Dashboard extends Component {
               <React.Fragment>
               <Segment textAlign="center"><h1>Repositories</h1></Segment>
               <List divided relaxed>
-                {this.state.nephews[this.state.active].actions.map(
+                {this.state.nephews[this.state.active].actiuni.map(
                   (action, index) => (
                     <List.Item key={index}>
                       <List.Icon
@@ -194,7 +194,7 @@ class Dashboard extends Component {
                 <Header as="h3" style={{ marginBottom: '3px' }}>
                   Repositories
                 </Header>
-                {this.state.nephews[this.state.active].actions.length}
+                {this.state.nephews[this.state.active].actiuni.length}
                 <br />
                 <br />
 
