@@ -22,7 +22,10 @@ The easiest way to monitor your nephew's GitHub progress.
 ## Instalation
 
 1. Install [curl](https://curl.haxx.se), [node](https://nodejs.org/en/), [composer](https://getcomposer.org/), [php](http://php.net)
-2. Backend
+
+2. You need to add this in your crontab "* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1"
+
+3. Backend
 
 - `cd backend`
 - `cp .env.example .env`
@@ -35,7 +38,7 @@ The easiest way to monitor your nephew's GitHub progress.
 - This should open a webserver on localhost, port 8000
 - It is recommended that you chnge the php.ini `MAX_POST_SIZE` and `MAX_FILE_UPLOAD_SIZE` to allow large files to be uploaded.
 
-3. Frontend
+4. Frontend
 
 - `cd frontend`
 - `npm install`
