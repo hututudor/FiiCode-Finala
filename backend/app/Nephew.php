@@ -10,7 +10,7 @@ class Nephew extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function actions(){
+    public function actiuni(){
         return $this->hasMany(Action::class);
     }
 }
