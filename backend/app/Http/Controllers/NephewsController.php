@@ -96,7 +96,7 @@ class NephewsController extends Controller
         if(!$user) {
             return response()->json('', 404);
         }
-        $nephews = $user->nephews()->orderBy('created_at', 'desc')->get();
+        $nephews = $user->nephews()->with('actions')->orderBy('points', 'created_at')->get();
         return response()->json(compact('nephews'), 200);
     }
 
