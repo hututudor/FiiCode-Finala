@@ -45,6 +45,7 @@ class update extends Command
 
         foreach(Nephew::all() as $nephew){
             $suma = 0;
+            $n=0; $n1=0;
             $curl = curl_init();
 
             curl_setopt_array($curl, array(

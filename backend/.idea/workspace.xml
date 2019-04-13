@@ -12,11 +12,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NephewsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NephewsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NephewsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="437">
               <caret line="83" column="51" lean-forward="false" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+              <folding>
+                <element signature="e#40#55#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/Commands/update.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1748">
+              <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
               <folding>
                 <element signature="e#40#55#0#PHP" expanded="true" />
               </folding>
@@ -63,8 +75,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_13_073325_create_actions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_13_073053_create_nephews_table.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/update.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/NephewsController.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/update.php" />
       </list>
     </option>
   </component>
@@ -223,7 +235,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="api&#9;FILE&#9;file:///sites/FiiCode-Finala/backend/routes/api.php&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="update&#9;FILE&#9;file:///sites/FiiCode-Finala/backend/app/Console/Commands/update.php&#10;api&#9;FILE&#9;file:///sites/FiiCode-Finala/backend/routes/api.php&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -327,12 +339,12 @@
       <updated>1554996512891</updated>
       <workItem from="1554996514307" duration="178000" />
       <workItem from="1554996821221" duration="856000" />
-      <workItem from="1555138664440" duration="17553000" />
+      <workItem from="1555138664440" duration="18218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18587000" />
+    <option name="totallyTimeSpent" value="19252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
@@ -508,16 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Nephew.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -544,8 +546,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NephewsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="437">
           <caret line="83" column="51" lean-forward="false" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1748">
+          <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
           <folding>
             <element signature="e#40#55#0#PHP" expanded="true" />
           </folding>
