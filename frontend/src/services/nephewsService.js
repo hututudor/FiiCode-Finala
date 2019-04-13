@@ -8,14 +8,14 @@ export const getAll = () => {
   return http.getPrivate('/nephews');
 };
 
-export const remove = uuid => {
-  return http.deletePrivate('/albums/' + uuid);
+export const remove = id => {
+  return http.deletePrivate('/nephews/' + id);
 };
 
 export const add = data => {
-  return http.postPrivate('/albums', data);
+  return http.postPrivate('/nephews', data);
 };
 
 export const edit = data => {
-  return http.putPrivate('/albums/' + data.uuid, data);
+  return http.putPrivate('/nephews/' + data.id, data);
 };

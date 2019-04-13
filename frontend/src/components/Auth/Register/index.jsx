@@ -73,7 +73,7 @@ class Register extends FormClass {
 		return (
 			<Grid textAlign="center" verticalAlign="middle" className="auth">
 				<Grid.Column style={{ maxWidth: 450 }}>
-					<Header as="h1" icon color="orange" textAlign="center">
+					<Header as="h1" icon color="blue" textAlign="center">
 						<Logo size={40} />
 						<br />
             <br/>
@@ -133,7 +133,7 @@ class Register extends FormClass {
 									<Button
 										disabled={this.state.loading}
 										className={this.state.loading ? 'loading' : ''}
-										color="orange"
+										color="blue"
 										size="large"
 										icon
 										labelPosition="right"
