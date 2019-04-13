@@ -119,10 +119,13 @@ class update extends Command
                     if ($err1) {
                         $this->info($err1);
                     } else {
-                        $n1= count(json_decode($response1));
-                        for($j=0; $j<$n1; $j++){
-                            $this-> info(json_decode($response1)[$j]->sha);
+                        if(gettype(json_decode($response1)) == "array"){
+                            $n1= count(json_decode($response1));
+                            for($j=0; $j<$n1; $j++){
+                                $this-> info(json_decode($response1)[$j]->sha);
+                            }
                         }
+                       else $n1=0;
                         $suma = $suma + $n1;
                     }
                 }
