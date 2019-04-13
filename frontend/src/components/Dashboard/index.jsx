@@ -133,6 +133,12 @@ class Dashboard extends Component {
                 >
                   Add new
                 </Button>
+                <Button color="blue" onClick={() => this.refresh()}>
+                  Refresh
+                </Button>
+                <Button color="purple" onClick={() => this.logout()}>
+                  Logout
+                </Button>
               </Menu.Item>
 
               {/*<Menu.Item name='updates' active={this.activeItem === 'updates'} onClick={this.handleItemClick}>*/}
@@ -203,12 +209,6 @@ class Dashboard extends Component {
                   onClick={() => this.toggleModal('removeModal')}
                 >
                   Delete
-                </Button>
-                <Button color="blue" onClick={() => this.refresh()}>
-                  Refresh
-                </Button>
-                <Button color="purple" onClick={() => this.logout()}>
-                  Logout
                 </Button>
               </Segment>
               </React.Fragment>
