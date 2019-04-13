@@ -12,7 +12,7 @@ class NephewsController extends Controller
     public function add(Request $request){
         $validator = Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:255'],
-            'github' => ['required', 'url', 'max:255'],
+            'github' => ['required', 'string', 'max:255'],
             'color' => ['required', 'string', 'max:255'],
             
         ]);
@@ -36,7 +36,7 @@ class NephewsController extends Controller
     public function edit(Request $request){
         $validator = Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:255'],
-            'github' => ['required', 'url', 'max:255'],
+            'github' => ['required', 'string', 'max:255'],
             'color' => ['required', 'string', 'max:255'],
         ]);
         if($validator->fails() ) {

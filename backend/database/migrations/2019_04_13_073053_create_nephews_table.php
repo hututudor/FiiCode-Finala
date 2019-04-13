@@ -20,6 +20,7 @@ class CreateNephewsTable extends Migration
             $table->string('github');
             $table->string('color');
             $table->integer('points')->default(0);
+            $table->integer('actions')->default(0);
             $table->timestamps();
         });
     }
