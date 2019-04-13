@@ -1,15 +1,15 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-02-06T12:38:48.829Z",
+	"__export_date": "2019-04-13T08:35:15.041Z",
 	"__export_source": "insomnia.desktop.app:v6.3.2",
 	"resources": [
 		{
 			"_id": "wrk_4c8bdbb194a14962b320d0cf02c75649",
 			"created": 1548505968516,
 			"description": "",
-			"modified": 1548505968516,
-			"name": "AlBoom",
+			"modified": 1555143082895,
+			"name": "Finala FIICODE",
 			"parentId": null,
 			"_type": "workspace"
 		},
@@ -18,12 +18,12 @@
 			"color": null,
 			"created": 1548505968701,
 			"data": {
-				"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0OTAyNDQ3MSwiZXhwIjoxNTU2ODAwNDcxLCJuYmYiOjE1NDkwMjQ0NzEsImp0aSI6IndETnBUUkhFWnBnU2NWamQiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.WusP4Ds74t7b0i5EyNmAKM1V3sNoKDe7c0XebaJPh5U",
+				"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTU1NTE0MzgxOSwiZXhwIjoxNTYyOTE5ODE5LCJuYmYiOjE1NTUxNDM4MTksImp0aSI6Ik02SkFQTk5rODcxU3VqRjkiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ._sQ47pxrMzqieUdJxWePjsdYavBJpxvyW5Bgn4dzUaA",
 				"url": "http://localhost:8000/api"
 			},
 			"isPrivate": false,
 			"metaSortKey": 1548505968701,
-			"modified": 1549024487851,
+			"modified": 1555143831654,
 			"name": "New Environment",
 			"parentId": "wrk_4c8bdbb194a14962b320d0cf02c75649",
 			"_type": "environment"
@@ -54,19 +54,8 @@
 			"description": "",
 			"environment": {},
 			"metaSortKey": -1548825437384.5,
-			"modified": 1548846582705,
-			"name": "Albums",
-			"parentId": "wrk_4c8bdbb194a14962b320d0cf02c75649",
-			"_type": "request_group"
-		},
-		{
-			"_id": "fld_39e3eaf8c86d44beba6575159f69e187",
-			"created": 1548846577236,
-			"description": "",
-			"environment": {},
-			"metaSortKey": -1548825437409.5,
-			"modified": 1548872371187,
-			"name": "Resources",
+			"modified": 1555143053342,
+			"name": "Nephews",
 			"parentId": "wrk_4c8bdbb194a14962b320d0cf02c75649",
 			"_type": "request_group"
 		},
@@ -111,7 +100,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1548505988512,
 			"method": "POST",
-			"modified": 1548846293603,
+			"modified": 1555143288118,
 			"name": "Register",
 			"parameters": [],
 			"parentId": "fld_e9ffcd4e06a24b6bad8d3be437e49df1",
@@ -204,7 +193,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1548762030874,
 			"method": "GET",
-			"modified": 1548931662110,
+			"modified": 1555144434541,
 			"name": "Get",
 			"parameters": [],
 			"parentId": "fld_66f4e2fecc3848178f37da38551cc086",
@@ -214,7 +203,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "{{url}}/albums/5950bfd6f17b410f860e61ab0cbd3b90",
+			"url": "{{url}}/nephews/2",
 			"_type": "request"
 		},
 		{
@@ -239,7 +228,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1548762030824,
 			"method": "GET",
-			"modified": 1548763751455,
+			"modified": 1555143982814,
 			"name": "Get All",
 			"parameters": [],
 			"parentId": "fld_66f4e2fecc3848178f37da38551cc086",
@@ -249,7 +238,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "{{url}}/albums",
+			"url": "{{url}}/nephews",
 			"_type": "request"
 		},
 		{
@@ -265,7 +254,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1548762030924,
 			"method": "DELETE",
-			"modified": 1548765899669,
+			"modified": 1555143894661,
 			"name": "Delete",
 			"parameters": [],
 			"parentId": "fld_66f4e2fecc3848178f37da38551cc086",
@@ -275,42 +264,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "{{url}}/albums/dsfdsfdsfdsffdsfd",
-			"_type": "request"
-		},
-		{
-			"_id": "req_d30d33db9fd74ee99c15ff7dc00d334d",
-			"authentication": {
-				"token": "{{ token  }}",
-				"type": "bearer"
-			},
-			"body": {
-				"mimeType": "application/json",
-				"text": "{\n\t\"name\": \"Best album\\\"; DROP ALL;--\",\n\t\"color\": \"depresie\",\n\t\"public\": 1,\n\t\"controls\": 0,\n\t\"autoplay\": 0\n}"
-			},
-			"created": 1548765916315,
-			"description": "",
-			"headers": [
-				{
-					"id": "pair_8fe1a5b0f8d9495e9e73bb0750a6ad16",
-					"name": "Content-Type",
-					"value": "application/json"
-				}
-			],
-			"isPrivate": false,
-			"metaSortKey": -1548765916315,
-			"method": "POST",
-			"modified": 1549146538971,
-			"name": "Add",
-			"parameters": [],
-			"parentId": "fld_66f4e2fecc3848178f37da38551cc086",
-			"settingDisableRenderRequestBody": false,
-			"settingEncodeUrl": true,
-			"settingMaxTimelineDataSize": 1000,
-			"settingRebuildPath": true,
-			"settingSendCookies": true,
-			"settingStoreCookies": true,
-			"url": "{{ url  }}/albums",
+			"url": "{{url}}/nephews/1",
 			"_type": "request"
 		},
 		{
@@ -321,7 +275,7 @@
 			},
 			"body": {
 				"mimeType": "application/json",
-				"text": "{\n\t\"name\": \"Lil Teo23\",\n\t\"color\": \"depresie\",\n\t\"public\": 1,\n\t\"controls\": 1,\n\t\"autoplay\": 1\n}"
+				"text": "{\n\t\"name\": \"Tudor1\",\n\t\"color\": \"black\",\n\t\"github\": \"https://github.com/hututudor\"\n}"
 			},
 			"created": 1548767350563,
 			"description": "",
@@ -335,7 +289,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1548767350563,
 			"method": "PUT",
-			"modified": 1548767403877,
+			"modified": 1555143912507,
 			"name": "Edit",
 			"parameters": [],
 			"parentId": "fld_66f4e2fecc3848178f37da38551cc086",
@@ -345,184 +299,42 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "{{ url }}/albums/92a9df80f18a4fd699ffff863c8fd315",
+			"url": "{{ url }}/nephews/1",
 			"_type": "request"
 		},
 		{
-			"_id": "req_8989198c7af9428fa49f037098889c7a",
-			"authentication": {
-				"token": "{{ token  }}",
-				"type": "bearer"
-			},
-			"body": {},
-			"created": 1548846599197,
-			"description": "",
-			"headers": [],
-			"isPrivate": false,
-			"metaSortKey": -1548846599197,
-			"method": "DELETE",
-			"modified": 1549196408950,
-			"name": "Delete",
-			"parameters": [],
-			"parentId": "fld_39e3eaf8c86d44beba6575159f69e187",
-			"settingDisableRenderRequestBody": false,
-			"settingEncodeUrl": true,
-			"settingMaxTimelineDataSize": 1000,
-			"settingRebuildPath": true,
-			"settingSendCookies": true,
-			"settingStoreCookies": true,
-			"url": "{{ url  }}/resources/1a5679bb701c4591b07f7712b80d85b2/",
-			"_type": "request"
-		},
-		{
-			"_id": "req_9ac27167a73a43a09902860d402b7cc1",
+			"_id": "req_7c41619c043a443191db0fda3cddd85e",
 			"authentication": {
 				"token": "{{ token  }}",
 				"type": "bearer"
 			},
 			"body": {
-				"mimeType": "multipart/form-data",
-				"params": [
-					{
-						"fileName": "D:\\1920px-Ideal_gas_law_relationships.svg.png",
-						"id": "pair_cd50a22094074958acb5f2044fd85424",
-						"name": "location",
-						"type": "file",
-						"value": ""
-					}
-				]
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"Tudor\",\n\t\"color\": \"black\",\n\t\"github\": \"https://github.com/hututudor\"\n}"
 			},
-			"created": 1548855324571,
+			"created": 1555143655868,
 			"description": "",
 			"headers": [
 				{
-					"id": "pair_b20bb609bb324df183dc862e8cace6ab",
+					"id": "pair_8fe1a5b0f8d9495e9e73bb0750a6ad16",
 					"name": "Content-Type",
-					"value": "multipart/form-data"
+					"value": "application/json"
 				}
 			],
 			"isPrivate": false,
-			"metaSortKey": -1548855324571,
+			"metaSortKey": -1548763973619.5,
 			"method": "POST",
-			"modified": 1548855462580,
+			"modified": 1555143856841,
 			"name": "Add",
 			"parameters": [],
-			"parentId": "fld_39e3eaf8c86d44beba6575159f69e187",
+			"parentId": "fld_66f4e2fecc3848178f37da38551cc086",
 			"settingDisableRenderRequestBody": false,
 			"settingEncodeUrl": true,
 			"settingMaxTimelineDataSize": 1000,
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "{{url}}/resources/d94f781a79c947748d8f4184c6ed6b24/",
-			"_type": "request"
-		},
-		{
-			"_id": "req_8bb9fbe7352a46f2a607e20b13ce6c04",
-			"authentication": {
-				"token": "{{token}}",
-				"type": "bearer"
-			},
-			"body": {
-				"mimeType": "application/x-www-form-urlencoded",
-				"params": [
-					{
-						"id": "pair_99560c89fb6e434c873196862ae4a8aa",
-						"name": "loop",
-						"value": "1"
-					},
-					{
-						"id": "pair_ee918d288f8945479facfb0d36bef531",
-						"name": "mute",
-						"value": "1"
-					},
-					{
-						"id": "pair_1e1ed54cda894387a106b999c33fdae7",
-						"name": "transition",
-						"value": "zoom"
-					},
-					{
-						"id": "pair_d1454501e2994ebebba1b35b7a6aa83e",
-						"name": "muted",
-						"value": "0"
-					}
-				]
-			},
-			"created": 1548855674841,
-			"description": "",
-			"headers": [
-				{
-					"id": "pair_30ec79b93b8049579c6d7019ac340188",
-					"name": "Content-Type",
-					"value": "application/x-www-form-urlencoded"
-				}
-			],
-			"isPrivate": false,
-			"metaSortKey": -1548855674841,
-			"method": "PUT",
-			"modified": 1548855922321,
-			"name": "Edit",
-			"parameters": [],
-			"parentId": "fld_39e3eaf8c86d44beba6575159f69e187",
-			"settingDisableRenderRequestBody": false,
-			"settingEncodeUrl": true,
-			"settingMaxTimelineDataSize": 1000,
-			"settingRebuildPath": true,
-			"settingSendCookies": true,
-			"settingStoreCookies": true,
-			"url": "{{url}}/resources/6cd64b83b4244809a7983ce36ddefcf6",
-			"_type": "request"
-		},
-		{
-			"_id": "req_74d4458c988f48839aca7a0e8a4314a7",
-			"authentication": {
-				"token": "{{token}}",
-				"type": "bearer"
-			},
-			"body": {},
-			"created": 1548856223739,
-			"description": "",
-			"headers": [],
-			"isPrivate": false,
-			"metaSortKey": -1548856223739,
-			"method": "GET",
-			"modified": 1548856264506,
-			"name": "Get",
-			"parameters": [],
-			"parentId": "fld_39e3eaf8c86d44beba6575159f69e187",
-			"settingDisableRenderRequestBody": false,
-			"settingEncodeUrl": true,
-			"settingMaxTimelineDataSize": 1000,
-			"settingRebuildPath": true,
-			"settingSendCookies": true,
-			"settingStoreCookies": true,
-			"url": "{{url}}/resources/6cd64b83b4244809a7983ce36ddefcf6",
-			"_type": "request"
-		},
-		{
-			"_id": "req_b9335dec5e6e4cd49b514eb722c05506",
-			"authentication": {
-				"token": "{{token}}",
-				"type": "bearer"
-			},
-			"body": {},
-			"created": 1548856641785,
-			"description": "",
-			"headers": [],
-			"isPrivate": false,
-			"metaSortKey": -1548856641785,
-			"method": "GET",
-			"modified": 1548856822439,
-			"name": "Get All",
-			"parameters": [],
-			"parentId": "fld_39e3eaf8c86d44beba6575159f69e187",
-			"settingDisableRenderRequestBody": false,
-			"settingEncodeUrl": true,
-			"settingMaxTimelineDataSize": 1000,
-			"settingRebuildPath": true,
-			"settingSendCookies": true,
-			"settingStoreCookies": true,
-			"url": "{{url}}/resources/d94f781a79c947748d8f4184c6ed6b24",
+			"url": "{{ url  }}/nephews",
 			"_type": "request"
 		},
 		{

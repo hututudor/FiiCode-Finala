@@ -19,4 +19,10 @@ Route::post('login', 'AuthController@authenticate');
 // middleware for auth-only routes
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('user', 'AuthController@getAuthenticatedUser');
+
+    Route::get('nephews/{id}', 'NephewsController@get');
+    Route::get('nephews', 'NephewsController@getall');
+    Route::post('nephews', 'NephewsController@add');
+    Route::put('nephews/{id}', 'NephewsController@edit');
+    Route::delete('nephews/{id}', 'NephewsController@delete');
 });

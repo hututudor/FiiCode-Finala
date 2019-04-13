@@ -42,4 +42,12 @@ class User extends Authenticatable implements JWTSubject {
     public function preferences(){
         return $this->hasMany(Preference::class);
     }
+
+    public function nephews(){
+        return $this->hasMany(Nephew::class);
+    }
+
+    public function settings(){
+        return $this->hasMany(Setting::class);
+    }
 }
