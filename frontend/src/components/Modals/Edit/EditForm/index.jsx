@@ -3,11 +3,10 @@ import FormClass from '../../../hoc/FormClass';
 import { Modal, Form, Icon, Message, Button } from 'semantic-ui-react';
 import _ from 'lodash';
 import Joi from 'joi-browser';
-import { connect } from 'react-redux';
 import {toast} from 'react-toastify';
 import * as nephew from '../../../../services/nephewsService';
 
-class EditAlbumModalForm extends FormClass {
+class EditModalForm extends FormClass {
   state = {
     data: {
       name: '',
@@ -21,7 +20,6 @@ class EditAlbumModalForm extends FormClass {
       .required()
       .label('Name'),
     github: Joi.string()
-      .url()
       .required()
       .label('Github'),
   };
@@ -42,8 +40,10 @@ class EditAlbumModalForm extends FormClass {
   doSubmit = () => {
     nephew
       .edit({
+        id: this.props.user.id,
         name: this.state.data.name,
         github: this.state.data.github,
+        color: 'red'
       })
       .then(res => {
         this.props.editNephew(this.props.user.id, res.data.nephew);
@@ -51,6 +51,7 @@ class EditAlbumModalForm extends FormClass {
         this.closeModal();
       })
       .catch(err => {
+        console.log(err);
         toast.error('Error saving!');
       });
   };
@@ -121,4 +122,4 @@ class EditAlbumModalForm extends FormClass {
   }
 }
 
-export default connect(EditAlbumModalForm);
+export default EditModalForm;

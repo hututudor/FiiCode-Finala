@@ -3,6 +3,9 @@ import {Grid, Menu, Button, Label, List, Segment, Header} from 'semantic-ui-reac
 import './style.scss';
 import * as nephews from '../../services/nephewsService';
 import EditModal from '../Modals/Edit';
+import AddModal from '../Modals/Add';
+import DeleteModal from '../Modals/Delete';
+import {withRouter} from 'react-router-dom';
 
 class Dashboard extends Component {
   state = {
@@ -19,26 +22,84 @@ class Dashboard extends Component {
     })
   };
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  logout = () => {
+    this.props.history.push('/logout');
+  }
+
+  refresh = () => {
+    nephews.getAll().then(res => {
+      this.setState({nephews: res.data.nephews, active: 0});
+    })
+  }
+
+  handleItemClick = (e, name) => this.setState({ active: name });
+
+  toggleModal = (m) => this.setState({[m]: !this.state[m]});
+
+  addNephew = (data) => {
+    this.setState({
+      nephews: [{...data, points: 0}, ...this.state.nephews]
+    })
+  };
+
+  editNephew = (id, data) => {
+    let nephews = { ...this.state.nephews };
+
+    nephews = this.state.nephews.map((nephew, index) => {
+      if (nephew.id !== id) {
+        return nephew;
+      } else {
+        return data;
+      }
+    });
+
+    console.log(nephews);
+
+    this.setState({
+      nephews
+    })
+  };
+
+  deleteNephew = (id) => {
+    let nephews = { ...this.state.nephews };
+
+    nephews = this.state.nephews.map((nephew, index) => {
+      if (nephew.id !== id) {
+        return nephew;
+      }
+    });
+
+    console.log(nephews);
+
+    this.setState({
+      nephews
+    })
+  }
 
   render() {
     return (
       <React.Fragment>
         {this.state.active != -1 && (<React.Fragment>
-              <EditModal show={this.state.editModal} user={this.state.nephews[this.state.active]} />
+            <EditModal show={this.state.editModal} user={this.state.nephews[this.state.active]} closeModal={() => this.toggleModal('editModal')} editNephew={this.editNephew} />
+            <DeleteModal show={this.state.removeModal} user={this.state.nephews[this.state.active]} closeModal={() => this.toggleModal('removeModal')} deleteNephew={this.deleteNephew} />
           </React.Fragment>)
           }
-        <Grid style={{minHeight: '100vh'}}>
+          <AddModal show={this.state.addModal} addNephew={this.addNephew} closeModal={() => this.toggleModal('addModal')} />
+        <Grid style={{minHeight: '100vh', margin: '10px'}}>
           <Grid.Column width={4} >
             <Menu vertical style={{width: '100%'}}>
               {
-                this.state.nephews.map(neph => (
-                  <Menu.Item name='updates' active={this.activeItem === 'updates'} onClick={this.handleItemClick} color={neph.color} key={neph.id}>
+                this.state.nephews.map((neph, index) => (
+                  <Menu.Item active={this.state.active == index} onClick={e => this.handleItemClick(e, index)} key={neph.id}>
                     <Label>{neph.points}</Label>
                     {neph.name}
                   </Menu.Item>
                 ))
               }
+
+              <Menu.Item name='updates'>
+                <Button color="green" onClick={() => this.toggleModal('addModal')}>Add new</Button>
+              </Menu.Item>
 
               {/*<Menu.Item name='updates' active={this.activeItem === 'updates'} onClick={this.handleItemClick}>*/}
                 {/*<Label>1</Label>*/}
@@ -73,7 +134,7 @@ class Dashboard extends Component {
             </List>
           </Grid.Column>
           <Grid.Column width={4}>
-            {this.state.active != -1 && (<Segment>
+            {this.state.active !== -1 ? (<Segment>
               <Header as="h3" style={{marginBottom: '3px'}}>Name</Header>
               {this.state.nephews[this.state.active].name}
               <br/>
@@ -85,13 +146,11 @@ class Dashboard extends Component {
               <br/>
               <br/>
 
-              <Button color="yellow">Edit</Button>
-              <Button color="red">Delete</Button>
-              <Button color="blue">Refresh</Button>
-
-
-
-            </Segment>)}
+              <Button color="yellow" onClick={() => this.toggleModal('editModal')}>Edit</Button>
+              <Button color="red" onClick={() => this.toggleModal('removeModal')}>Delete</Button>
+              <Button color="blue" onClick={() => this.refresh()}>Refresh</Button>
+              <Button color="purple" onClick={() => this.logout()}>Logout</Button>
+            </Segment>) : null}
           </Grid.Column>
         </Grid>
       </React.Fragment>
@@ -99,4 +158,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

@@ -2,23 +2,33 @@ import React, { Component } from 'react';
 import Logo from '../hoc/Logo';
 import './style.scss';
 import {
-	Segment,
-	Button,
-	Icon,
-	Card,
-	Container,
-	Image
+  Button,
 } from 'semantic-ui-react';
-import * as http from '../../services/httpService';
 
 class Home extends Component {
-	render() {
-		return (
-			<React.Fragment>
-				home
-			</React.Fragment>
-		);
-	}
+  goTo = link => {
+    this.props.history.push(link);
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="cont">
+          <div className="divcont">
+            <h1>
+              <Logo size={60} />
+            </h1>
+            <p>Monitor all your nephews easily</p>
+            <div className="buttons">
+              <Button onClick={() => this.goTo('/login')} size="big" color="blue">Login</Button>
+              <Button onClick={() => this.goTo('/register')} size="big" color="purple">Register</Button>
+            </div>
+          </div>
+        </div>
+
+      </React.Fragment>
+    );
+  }
 }
 
 export default Home;
