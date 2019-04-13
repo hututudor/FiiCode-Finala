@@ -13,10 +13,11 @@ class InfoModal extends Component {
         <Modal.Header>
           How to use?
         </Modal.Header>
-        <Modal.Content style={{fontSize: 20}}>
+        <Modal.Content style={{fontSize: 18}}>
           <p>Firstly, create an account. You can do this by pressing the register button and then filling your name, email and password.</p>
           <p>When you need to login, click login and fill your data.</p>
           <p>When you are in the dashboard, you can add your nephews by clicking the add button.</p>
+          <p>It may take up to 15 minutes to have all your nephew's repositories</p>
           <p>You will have a list of nephews on your left.</p>
           <p>You can view the nephew's repositories in the center.</p>
           <p>In the right, you can view details about the nephew, like name, GitHub username and points.</p>

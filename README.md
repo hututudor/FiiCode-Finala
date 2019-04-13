@@ -7,6 +7,7 @@ The easiest way to monitor your nephew's GitHub progress.
  - Firstly, create an account. You can do this by pressing the register button and then filling your name, email and password.
  - When you need to login, click login and fill your data.
  - When you are in the dashboard, you can add your nephews by clicking the add button.
+ - It may take up to 15 minutes to have all your nephew's repositories
  - You will have a list of nephews on your left.
  - You can view the nephew's repositories in the center.
  - In the right, you can view details about the nephew, like name, GitHub username and points.

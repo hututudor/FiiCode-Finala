@@ -48,7 +48,7 @@ class Dashboard extends Component {
 
   addNephew = data => {
     this.setState({
-      nephews: [{ ...data, points: 0 }, ...this.state.nephews]
+      nephews: [{ ...data, points: 0, actiuni: [] }, ...this.state.nephews]
     });
   };
 
