@@ -1,0 +1,9 @@
+.logo {
+	font-family: 'Comfortaa', cursive;
+	color: darkslateblue;
+	user-select: none;
+
+	& span {
+		color: deepskyblue;
+	}
+}

@@ -1,0 +1,84 @@
+.ui.left.visible.sidebar,
+.ui.right.visible.sidebar {
+  box-shadow: none !important;
+  width: 18rem !important;
+}
+
+.ui.grid {
+  margin: 0 !important;
+}
+
+.contain {
+  box-sizing: border-box;
+  padding: 3rem 0rem 0 0rem;
+}
+
+.contain.dash {
+  margin-left: 18rem !important;
+}
+
+.contain.center {
+  text-align: center;
+}
+
+.contain.first {
+  padding-top: 20vh;
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+.navbar {
+  border-radius: 0 !important;
+  margin: 0 !important;
+  border: 0;
+  box-sizing: border-box;
+  border-left: 1px solid rgba(black, 0.2) !important;
+  margin-left: 18rem !important;
+  font-size: 1.2rem !important;
+}
+
+.centered-buttons {
+  text-align: right;
+
+  .button {
+    margin: 0 !important;
+    // margin-top: 1em !important;
+    text-align: center !important;
+
+    i {
+      margin: 0 !important;
+    }
+  }
+}
+
+.button-fix i {
+  margin: 0 !important;
+}
+
+.add_album_button {
+  // background-color: #21ba45 !important;
+  background-color: white;
+  position: absolute;
+  border-style: dashed !important;
+  min-height: 50px !important;
+}
+
+.add_album_button i {
+  position: relative;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translateY(-50%) !important;
+
+  &::before {
+    position: relative;
+    // top: 50% !important;
+    // left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+.dropzone:focus {
+  outline: none !important;
+}
