@@ -35,9 +35,9 @@ The easiest way to monitor your nephew's GitHub progress.
 
 ## Notes
 
--You may experience problems, due to the GitHub API requests cap, depending on how big the accounts you are checking are.
--Five points are given for each public repository the account created, and one point is given for each push.
--You can manually run the cronjb by using `php artisan update:puncte` in the backend folder.
+ - You may experience problems, due to the GitHub API requests cap, depending on how big the accounts you are checking are. 
+ - Five points are given for each public repository the account created, and one point is given for each push. 
+ - You can manually run the cronjb by using `php artisan update:puncte` in the backend folder.
 
 
 ## Contribuitors
