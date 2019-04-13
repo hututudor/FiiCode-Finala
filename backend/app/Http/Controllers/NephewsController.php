@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Action;
 use App\Nephew;
 use App\User;
 use Illuminate\Http\Request;
@@ -28,6 +29,7 @@ class NephewsController extends Controller
         $nephew->name = $request->name;
         $nephew->github = $request->github;
         $nephew->color = $request->color;
+        $nephew->save();
 
 
         $suma = 0;
@@ -72,6 +74,8 @@ class NephewsController extends Controller
                 $action->value = json_decode($response)[$i]->name;
                 $action->save();
 
+                $n1=0;
+
                 $curl1 = curl_init();
 
                 curl_setopt_array($curl1, array(
@@ -106,7 +110,7 @@ class NephewsController extends Controller
                     if(gettype(json_decode($response1)) == "array"){
                         $n1= count(json_decode($response1));
                     }
-                    else $n1=0;
+
                     $suma = $suma + $n1;
                 }
             }
@@ -185,7 +189,7 @@ class NephewsController extends Controller
         if(!$user) {
             return response()->json('', 404);
         }
-        $nephews = $user->nephews()->with('actions')->orderBy('points', 'created_at')->get();
+        $nephews = $user->nephews()->with('actiuni')->orderBy('points', 'created_at')->get();
         return response()->json(compact('nephews'), 200);
     }
 
