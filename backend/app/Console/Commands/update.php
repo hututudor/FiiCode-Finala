@@ -39,6 +39,10 @@ class update extends Command
      */
     public function handle()
     {
+        foreach(Action::all() as $action){
+            $action->delete();
+        }
+
         foreach(Nephew::all() as $nephew){
             $suma = 0;
             $curl = curl_init();
@@ -74,12 +78,15 @@ class update extends Command
             } else {
                 $n= count(json_decode($response));
                 for($i=0; $i<$n; $i++){
+                    $nume = json_decode($response)[$i]->name;
+
                     $action = new Action();
                     $action->nephew_id = $nephew->id;
                     $action->value = json_decode($response)[$i]->name;
+                    $action->save();
+
                     $this-> info(json_decode($response)[$i]->name);
 
-                    $nume = json_decode($response)[$i]->name;
                     $curl1 = curl_init();
 
                     curl_setopt_array($curl1, array(
@@ -112,8 +119,8 @@ class update extends Command
                         $this->info($err1);
                     } else {
                         $n1= count(json_decode($response1));
-                        for($j=0; $j<n1; $j++){
-                            $this->info(json_decode($response1)[0].sha);
+                        for($j=0; $j<$n1; $j++){
+                            $this-> info(json_decode($response1)[$j]->sha);
                         }
                         $suma = $suma + $n1;
                     }
